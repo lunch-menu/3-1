@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+.container {
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .logo {
+    margin-top: 20px;
+}
+header {
+    width: 1280px;
+    background-color: black;
+    height: 80px;
+    border: 1px solid white;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 3;
+    border-radius: 0px;
+    transition: border-radius 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+.progress-bar {
+    width: 0px;
+    height: 5px;
+    margin-top: 2px;
+    background-color: rgb(184, 0, 0);
+    position: fixed;
+    margin-left: 36px;
+}
+.navi a {
+    transition: 0.3s;
+    font-size: 16px;
+    line-height: 80px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.navi a span {
+    color: rgb(177, 23, 23);
+    font-weight: 900;
+}
+
+.navi a span:hover {
+    color: rgb(255, 132, 132);
+}
+
+.navi a:not(:last-of-type) {
+    margin-right: 36px;
+}
+
+.navi a:hover {
+    color: rgb(146, 146, 146);
+}
+
+.sec1 {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+    position: relative;
+    transition: height 0.3s ease-in-out;
+}
+
+.sec1 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.sec1.video-hidden video {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sec2 {
+    background-color: #000000;
+    height: 300px;
+}
+
+.sec2.padding-hidden {
+    padding-top: 0;
+}
+
+.sec3 {
+    background-color: #F3F3F3;
+    height: 100vh;
+    padding-top: 60px;
+    position: relative;
+    z-index: 2; /* Add a higher z-index value */
+    overflow: hidden;
+}
+
+.sec3 .container {
+    background-color: #F3F3F3 !important;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+.container1 {
+    width: 90%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+}
+.cont {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 36px;
+    margin-bottom: 64px;
+    overflow-y: scroll;
+}
+.c1{
+    position: absolute;
+    width: 864px;
+    height: 460px;
+    border-radius: 160px;
+    background-image: url(arrival/1.png);
+}
+.c2{
+    position: absolute;
+    width: 864px;
+    height: 460px;
+    border-radius: 160px;
+    background-image: url(arrival/2.png);
+}
+.c3{
+    position: absolute;
+    width: 864px;
+    height: 460px;
+    border-radius: 160px;
+    background-image: url(arrival/3.png);
+}
+.c4{
+    position: absolute;
+    width: 864px;
+    height: 460px;
+    border-radius: 160px;
+    background-image: url(arrival/4.png);
+}
+.container1::-webkit-scrollbar {
+    display: none;
+}
+
+.container1 {
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+.con {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border:#000000 1px solid;
+}
+.con:not(:last-child){
+    margin-bottom: 24px;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* 검은색 오버레이 */
+    border-radius: 160px;
+    opacity: 0; /* 초기에는 투명하게 설정 */
+    transition: opacity 0.3s ease-in-out; /* 부드러운 페이드 효과를 위한 트랜지션 설정 */
+}
+.overlay-text {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
+   line-height: 24px;
+   font-size: 16px;
+   font-weight: 300;
+   text-align: center;
+   opacity: 0; /* 초기에는 투명하게 설정 */
+   transition: opacity 0.3s ease-in-out; /* 부드러운 페이드 효과를 위한 트랜지션 설정 */
+}
+.spR{
+    color: rgb(226, 0, 0);
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.con:hover .overlay {
+    opacity: 1; /* 호버 했을 때 오버레이가 나타나도록 설정 */
+}
+
+.con:hover .overlay-text {
+    opacity: 1; /* 호버 했을 때 텍스트가 나타나도록 설정 */
+}
+.sec4{
+    width: 100%;
+    padding-top: 36px;
+    background-color: #E6E6E6;
+    height: 100vh;
+    overflow: hidden;
+}
+.c11{
+    text-align: right;
+}
+.sub-navi{
+    text-align: right;
+    font-size: 40px;
+    margin-top: 4px;
+
+}
+.nav-link {
+transition: color 0.5s ease;
+}
+.sub-navi a{
+text-decoration: none;
+color: #777777;
+font-weight: 900;
+}
+.sub-navi a:not(:last-of-type){
+    margin-right: 60px;
+}
+.sub-navi a:hover{
+    color: #000000;
+}
+.c12{
+    display: flex;
+}
+.mm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}   
+.mm.m1::before,
+.mm.m2::before,
+.mm.m3::before {
+    content: "";
+}
+#kk{
+    font-weight: 900;
+    color: #910000;
+}
+.mm p {
+    position: relative;
+    z-index: 2;
+}
+.mm{
+    padding-top: 170px;
+    height: 85vh;
+    margin-top: 34px;
+    transition: flex-grow 0.5s ease;
+    position: relative;
+}
+.mm p{color: #F3F3F3;}
+.m1{
+   background-image: url(https://i.postimg.cc/66Py4th0/4302ae0830daf812130ac43f15285cd4.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   flex-grow: 2;
+}
+.m2{
+    background-image: url(https://i.postimg.cc/fRcLPXQ2/Best-White-Sneakers-For-Women-Sneak-These-White-Sneakers-Into-Your-Shoe-Closet-Right-Now.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+}
+.m3{
+    background-image: url(https://i.postimg.cc/CKjfgXTg/photo-1602237197229-1cdbc1f6ccd1-ixlib-rb-4-0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+}
+.mm p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+}
+.acontainer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.acontainer a{
+    z-index: 10;
+    line-height: 28px;
+    color: #F3F3F3;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+.acontainer a:hover{
+    z-index: 10;
+    background-color: #910000;
+    text-decoration: none;
+}
+.acontainer a:not(:last-of-type){
+    margin-bottom: 24px;
+}
+.sec5{
+    height: 80vh;
+}
+.sec5 .container p{
+    margin-top: 60px;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 28px;
+}
+.conn-wrap{
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    background-color: aqua;
+}
+.box1{
+    background-color: #910000;
+    width: 1060px;
+    height: 284px;
+    display: flex;
+    margin-right: 60px;
+
+}
+.box1-1{
+    width: 50%;
+    height: 100%;
+    background-image: url(event/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.box1-2{
+    width: 50%;
+    height: 100%;
+    padding: 40px 30px;
+    font-size: 14px;
+}
+.box2{
+    background-color: #910000;
+    width: 1060px;
+    height: 284px;
+    display: flex;
+    margin-right: 60px;
+
+}
+.box2-1{
+    width: 50%;
+    height: 100%;
+    background-image: url(event/2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.box2-2{
+    width: 50%;
+    height: 100%;
+    padding: 40px 30px;
+    font-size: 14px;
+}
+.box3{
+    background-color: #910000;
+    width: 1060px;
+    height: 284px;
+    display: flex;
+    margin-right: 60px;
+}
+.box3-1{
+    width: 50%;
+    height: 100%;
+    background-image: url(event/3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.box3-2{
+    width: 50%;
+    height: 100%;
+    padding: 40px 30px;
+    font-size: 14px;
+}
+.box4{
+    background-color: #910000;
+    width: 1060px;
+    height: 284px;
+    display: flex;
+    margin-right: 60px;
+}
+.box4-1{
+    width: 50%;
+    height: 100%;
+    background-image: url(event/4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.box4-2{
+    width: 50%;
+    height: 100%;
+    padding: 40px 30px;
+    font-size: 14px;
+}
+.conn-wrap:hover{cursor: pointer;}
+.sec5 {
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 400px;
+}
+
+.conn-wrap {
+display: flex;
+animation: loopAnimation 12s linear infinite;
+}
+
+.conn-wrap img {
+height: 280px;
+object-fit: cover;
+}
+
+@keyframes loopAnimation {
+0% {
+transform: translateX(0);
+}
+20% {
+transform: translateX(-25%);
+}
+40% {
+transform: translateX(-50%);
+}
+60% {
+transform: translateX(-75%);
+}
+80% {
+transform: translateX(-100%);
+}
+100% {
+transform: translateX(0);
+}
+}
